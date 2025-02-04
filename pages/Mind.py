@@ -74,7 +74,7 @@ try:
         if len(spotify_track_ids) > 0:
             st.html('<span style="font-size: 15px; font-weight: bold;">Here are some song recommendations:</span>')
             for track_id in spotify_track_ids:
-                iframe_string = f'<iframe style="border-radius:12px; margin-bottom: -70px;" src="https://open.spotify.com/embed/track/{track_id}?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+                iframe_string = f'<iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/{track_id}?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
                 st.markdown(iframe_string, unsafe_allow_html=True)
             # For persistence:
             mind_current = pd.DataFrame({'id': [i for i in range(1, 11)], 'user_id': [1] * 10, 'current_issue': [st.session_state.mind_issue] * 10, 'recommended_track_id': spotify_track_ids})
