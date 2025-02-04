@@ -33,5 +33,5 @@ st.html('<span style="font-size: 15px;">' + current_mind_issue + '</span>')
 st.html('<span style="font-size: 15px; font-weight: bold;">Recommended Songs:</span>')
 track_ids = mind['recommended_track_id'].tolist()
 for i in range(10):
-    iframe_string = f'<iframe style="border-radius: 12px; margin-bottom: -70px; padding-bottom: 0px;" src="https://open.spotify.com/embed/track/{track_ids[i]}?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'        
+    iframe_string = f'<iframe style="border-radius: 12px; " src="https://open.spotify.com/embed/track/{track_ids[i]}?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
     st.markdown(iframe_string, unsafe_allow_html=True)   
